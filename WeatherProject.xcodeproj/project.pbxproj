@@ -10,8 +10,11 @@
 		EC1F357A1C714041000CA3EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F35791C714041000CA3EC /* AppDelegate.swift */; };
 		EC1F357C1C714041000CA3EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F357B1C714041000CA3EC /* ViewController.swift */; };
 		EC1F357F1C714041000CA3EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1F357D1C714041000CA3EC /* Main.storyboard */; };
-		EC1F35811C714041000CA3EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1F35801C714041000CA3EC /* Assets.xcassets */; };
 		EC1F35841C714041000CA3EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1F35821C714041000CA3EC /* LaunchScreen.storyboard */; };
+		EC3FC3951C724569002F14E1 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3FC3941C724569002F14E1 /* NetworkOperation.swift */; };
+		EC3FC3971C72457A002F14E1 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3FC3961C72457A002F14E1 /* CurrentWeather.swift */; };
+		EC3FC3991C724590002F14E1 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3FC3981C724590002F14E1 /* ForecastService.swift */; };
+		EC82192C1C73736100ADE005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC82192B1C73736100ADE005 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +22,12 @@
 		EC1F35791C714041000CA3EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1F357B1C714041000CA3EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC1F357E1C714041000CA3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC1F35801C714041000CA3EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC1F35831C714041000CA3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1F35851C714041000CA3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3FC3941C724569002F14E1 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		EC3FC3961C72457A002F14E1 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		EC3FC3981C724590002F14E1 /* ForecastService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		EC82192B1C73736100ADE005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				EC1F35791C714041000CA3EC /* AppDelegate.swift */,
 				EC1F357B1C714041000CA3EC /* ViewController.swift */,
+				EC3FC3941C724569002F14E1 /* NetworkOperation.swift */,
+				EC3FC3961C72457A002F14E1 /* CurrentWeather.swift */,
+				EC3FC3981C724590002F14E1 /* ForecastService.swift */,
 				EC1F357D1C714041000CA3EC /* Main.storyboard */,
-				EC1F35801C714041000CA3EC /* Assets.xcassets */,
 				EC1F35821C714041000CA3EC /* LaunchScreen.storyboard */,
 				EC1F35851C714041000CA3EC /* Info.plist */,
+				EC82192B1C73736100ADE005 /* Assets.xcassets */,
 			);
 			path = WeatherProject;
 			sourceTree = "<group>";
@@ -124,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1F35841C714041000CA3EC /* LaunchScreen.storyboard in Resources */,
-				EC1F35811C714041000CA3EC /* Assets.xcassets in Resources */,
+				EC82192C1C73736100ADE005 /* Assets.xcassets in Resources */,
 				EC1F357F1C714041000CA3EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1F357C1C714041000CA3EC /* ViewController.swift in Sources */,
+				EC3FC3951C724569002F14E1 /* NetworkOperation.swift in Sources */,
+				EC3FC3971C72457A002F14E1 /* CurrentWeather.swift in Sources */,
+				EC3FC3991C724590002F14E1 /* ForecastService.swift in Sources */,
 				EC1F357A1C714041000CA3EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +260,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = WeatherProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ident.EugeneHome.WeatherProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -259,7 +273,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = WeatherProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ident.EugeneHome.WeatherProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +301,7 @@
 				EC1F358A1C714041000CA3EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
